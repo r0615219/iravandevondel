@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ entry.title }} | {{ siteName }}</title>
+    <meta name="description" content="">
+    <meta name="msapplication-tap-highlight" content="yes"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0"/>
+
+    <!-- Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!--  Bootstrap 3-->
+    <link rel="stylesheet" href="{{ siteUrl }}/css/bootstrap.min.css">
+
+    <!-- OWL Carousel -->
+    <link rel="stylesheet" href="{{ siteUrl }}/css/owl.carousel.css">
+    <link rel="stylesheet" href="{{ siteUrl }}/css/owl.theme.css">
+
+    <!--  Slider -->
+    <link rel="stylesheet" href="{{ siteUrl }}/css/jquery.kenburnsy.css">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="{{ siteUrl }}/css/animate.css">
+
+    <!-- Web Icons Font -->
+    <link rel="stylesheet" href="{{ siteUrl }}/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="{{ siteUrl }}/css/iconmoon.css">
+    <link rel="stylesheet" href="{{ siteUrl }}/css/et-line.css">
+    <link rel="stylesheet" href="{{ siteUrl }}/css/ionicons.css">
+
+    <!-- Magnific PopUp -->
+    <link rel="stylesheet" href="{{ siteUrl }}/css/magnific-popup.css">
+
+    <!-- Tabs -->
+    <link rel="stylesheet" type="text/css" href="{{ siteUrl }}/css/tabs.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ siteUrl }}/css/tabstyles.css"/>
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+
+    <!-- Loader Style -->
+    <link rel="stylesheet" href="{{ siteUrl }}/css/loader-1.css">
+
+    <!-- Costum Styles -->
+    <link rel="stylesheet" href="{{ siteUrl }}/css/main.css">
+    <link rel="stylesheet" href="{{ siteUrl }}/css/responsive.css">
+    <link rel="stylesheet" href="{{ siteUrl }}/css/custom.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="{{ siteUrl }}favicon.ico">
+
+    <!-- Modernizer & Respond js -->
+    <script src="{{ siteUrl }}/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+
+<!-- Preloader -->
+<div class="cover"></div>
+
+{% include '_snippets/_header' %}
+
+{% block content %}{% endblock %}
+
+{% include '_snippets/_footer' %}
+
+<script src="{{ siteUrl }}/js/vendor/jquery-1.11.2.min.js"></script>
+<script data-pace-options='{ "ajax": false }' src="{{ siteUrl }}/js/vendor/pace.min.js"></script>
+<script src="{{ siteUrl }}/js/vendor/bootstrap.min.js"></script>
+<script src="{{ siteUrl }}/js/vendor/classie.js"></script>
+<script src="{{ siteUrl }}/js/vendor/isotope.pkgd.min.js"></script>
+<script src="{{ siteUrl }}/js/vendor/jquery.velocity.min.js"></script>
+<script src="{{ siteUrl }}/js/vendor/jquery.kenburnsy.min.js"></script>
+<script src="{{ siteUrl }}/js/vendor/textslide.js"></script>
+<script src="{{ siteUrl }}/js/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="{{ siteUrl }}/js/vendor/tabs.js"></script>
+<script src="{{ siteUrl }}/js/ef-slider.js"></script>
+<script src="{{ siteUrl }}/js/vendor/owl.carousel.min.js"></script>
+<script src="{{ siteUrl }}/js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="{{ siteUrl }}/js/vendor/jquery.social-buttons.min.js"></script>
+<script src="{{ siteUrl }}/js/vendor/wow.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+<script src="{{ siteUrl }}/js/main.js"></script>
+<script src="{{ siteUrl }}/js/ajax.js"></script>
+</body>
+</html>

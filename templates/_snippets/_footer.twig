@@ -1,0 +1,47 @@
+<div class="footer margin-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-sm-4 col-xs-12">
+                <div class="footer-inner">
+                    <div class="footer-content">
+                        <h4>{{ siteName|upper }}</h4>
+                        {% if mainInfo.address|length %}
+                            <address>{{ mainInfo.address.street ?? '' }} <br>{{ mainInfo.address.postalCode }} {{ mainInfo.address.city }} <br>{{ mainInfo.address.country }}</address>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-md-push-8 col-sm-4 col-xs-12">
+                <div class="footer-inner">
+                    <div class="footer-content">
+                        <h4>Contact</h4>
+                        <p>
+                            {% if mainInfo.phone|length %}
+                                <span class="ion-ios-telephone"></span> &nbsp; <a href="tel:{{ mainInfo.phone }}">{{ mainInfo.phone }}</a> <br>
+                            {% endif %}
+                            {% if mainInfo.mobile|length %}
+                                <span class="ion-iphone"></span> &nbsp; <a href="tel:{{ mainInfo.mobile }}">{{ mainInfo.mobile }}</a> <br>
+                            {% endif %}
+                            {% if mainInfo.mail|length %}
+                                {#<span class="ion-ios-email-outline"></span> &nbsp; #}<a href="mailto:{{ mainInfo.mail }}">{{ mainInfo.mail }}</a> <br>
+                            {% endif %}
+                            {% if mainInfo.website|length %}
+                                {#<span class="ion-android-globe"></span> &nbsp; #}<a href="http://{{ mainInfo.website }}" target="_blank">{{ mainInfo.website }}</a>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="footer-inner">
+                    <div class="footer-content">
+                        <span class="copyright-mark">&copy; {{ now|date('Y') }}, {{ siteName|upper }} <br><br> Powered by <a
+                                    href="http://carolineboeykens.be" target="_blank">carolineboeykens</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

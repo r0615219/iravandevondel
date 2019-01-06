@@ -1,0 +1,124 @@
+{% extends '_layout' %}
+
+{% block content %}
+    {% if entry.heroImage|length %}
+        <div class="container">
+            <div class="single-project-slider">
+                <div class="owl-carousel single-slider">
+                    <div><img class="img-responsive center-block"
+                              src="{{ entry.heroImage.one().getUrl('fullWidthImage') }}" alt="slider"></div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="container">
+        <div class="single-portfolio-wrapper">
+            <div class="row">
+                <div class="col-md-8 col-sm-8">
+                    <h1>{{ entry.title|upper }}</h1>
+                    {% if entry.jewelsCategories|length %}
+                        <span class="info">
+                            {% for jewel in entry.jewelsCategories.all() %}
+                                {{ jewel.title|upper }}{% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        </span>
+                    {% endif %}
+                    {% if entry.text|length %}
+                        {{ entry.text }}
+                    {% endif %}
+                </div>
+                <div class="col-md-3 col-md-offset-1 col-sm-4">
+                    <div class="project-information">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td><strong>Naam:</strong></td>
+                                <td>{{ entry.title }}</td>
+                            </tr>
+                            {% if entry.number|length %}
+                                <tr>
+                                    <td><strong>Nummer:</strong></td>
+                                    <td>{{ entry.number }}</td>
+                                </tr>
+                            {% endif %}
+                            {% if entry.jewelsCategories|length %}
+                                <tr>
+                                    <td><strong>Categorie:</strong></td>
+                                    <td>
+                                        {% for jewel in entry.jewelsCategories.all() %}
+                                            {{ jewel.title }}{% if not loop.last %}, {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                            {% endif %}
+                            {% if entry.productionYear %}
+                                <tr>
+                                    <td><strong>Jaar:</strong></td>
+                                    <td>{{ entry.productionYear }}</td>
+                                </tr>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if entry.images|length %}
+        <div class="container">
+            <div class="single-project-details">
+                <div class="row">
+                    {% for image in entry.images.all() %}
+                        <div class="col-md-6 col-sm-6">
+                            <div class="single-project-images">
+                                <a data-fancybox="gallery" href="{{ image.getUrl() }}">
+                                    <img src="{{ image.getUrl('otherImages') }}" alt="{{ image.title }}">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% set params = craft.entries.section('jewels') %}
+    {% set prevEntry = entry.getPrev(params) %}
+    {% set nextEntry = entry.getNext(params) %}
+    <div class="container">
+        <div class="portfolio-controls">
+            <div class="btn-project home-btn">
+                <a href="{{ craft.entries.section('jewelsOverview').one().url }}" data-hover="Overzicht">
+                    <i class="pe-7s-keypad"></i>
+                </a>
+            </div>
+            {% if nextEntry|length %}
+                <div class="btn-project forward-btn">
+                    <a href="{{ nextEntry.url }}" data-hover="Volgende">
+                        <i class="pe-7s-angle-right right"></i>
+                    </a>
+                </div>
+            {% endif %}
+            {% if prevEntry|length %}
+                <div class="btn-project back-btn">
+                    <a href="{{ prevEntry.url }}" data-hover="Vorige">
+                        <i class="pe-7s-angle-left left"></i>
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% if entry.relatedJewels|length %}
+    <div class="container margin-top">
+        <div class="similar-project">
+            <h4>Andere juwelen</h4>
+            <div class="row">
+                {% for jewelEntry in entry.relatedJewels.all() %}
+                    {% include '_snippets/_item/_jewel' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends '_layout' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="header-page" style="background-image:url({{ entry.heroImage.one().getUrl('hero') ?? fallback.heroImage.one().getUrl('hero') }})">
+            <div class="col-md-6 col-md-offset-6">
+                <div class="row">
+                    <div class="inner-content">
+                        <div class="header-content">
+                            <h1>{{ entry.title }}</h1>
+                            <hr>
+                            <p>{{ entry.intro }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% set news = craft.entries.section('publications').orderBy('postDate') %}
+    {% if news|length %}
+        <div class="container margin-top">
+            <div class="blog-wrapper">
+                {% for blogEntry in news.all() %}
+                <div class="blog-post">
+                    <div class="blog-front-image">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="{{ blogEntry.heroImage.one().getUrl('blogHero') ?? fallback.heroImage.one().getUrl('blogHero') }}" alt="{{ entry.title }}">
+                            </div>
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="blog-front-content">
+                                    <div class="blog-front-content-inner">
+                                        <span class="post-date">{{ blogEntry.postDate|date('d F Y') }}</span>
+                                        <h1>{{ blogEntry.title }}</h1>
+                                        {{ blogEntry.intro }}
+                                        <a href="{{ blogEntry.url }}"><i class="read-more-blog-icon pe-7s-angle-right-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+
+    {#<div class="container">
+        <ul class="pagination-ef">
+            <li>
+                <a href="#">
+                    <i class="pe-7s-angle-left"></i>
+                </a>
+            </li>
+            <li class="current"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">8</a></li>
+            <li>
+                <a href="#">
+                    <i class="pe-7s-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>#}
+
+{% endblock %}

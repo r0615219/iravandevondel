@@ -1,0 +1,20 @@
+<div class="col-md-4 col-sm-4 col-xs-12 mix {% for stick in projectEntry.sticksCategories.all() %} {{ stick.slug }}{% endfor %}">
+    <div class="img home-portfolio-image">
+        <img src="{{ projectEntry.heroImage.one().getUrl('overviewImage') ?? '' }}" alt="{{ projectEntry.title }}">
+        <div class="overlay-thumb">
+            <div class="details">
+                <span class="title">{{ projectEntry.title|upper }}</span>
+                {% if projectEntry.sticksCategories|length %}
+                    <span class="info">
+                    {% for stick in projectEntry.sticksCategories.all() %}
+                        {{ stick.title|upper }}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </span>
+                {% endif %}
+            </div>
+            <span class="btnBefore"></span>
+            <span class="btnAfter"></span>
+            <a class="main-portfolio-link" href="{{ projectEntry.url }}"></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+{% extends '_layout' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="header-page" style="background-image:url({{ entry.heroImage|length ? entry.heroImage.one().getUrl('hero') : fallback.heroImage.one().getUrl('hero') }})">
+            <div class="col-md-6 col-md-offset-6">
+                <div class="row">
+                    <div class="inner-content">
+                        <div class="header-content">
+                            <h1>{{ entry.title }}</h1>
+                            <hr>
+                            <p>{{ entry.intro }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container margin-top">
+        <div class="portfolio-wrapper">
+            <button class="nav open">
+                <span class="icon-container">
+                    <span class="line line01"></span>
+                    <span class="line line02"></span>
+                    <span class="line line03"></span>
+                    <span class="line line04"></span>
+                </span>
+            </button>
+            <div class="works-filter open">
+                <a href="javascript:void(0)" class="filter active" data-filter="mix">All</a>
+                {% for jewel in craft.categories.group('jewelsCategory').all() %}
+                    <a href="javascript:void(0)" class="filter" data-filter="{{ jewel.slug }}">{{ jewel.title }}</a>
+                {% endfor %}
+            </div>
+            <div class="js-masonry">
+                <div class="row" id="work-grid">
+                    {% for jewelEntry in craft.entries.section('jewels').all() %}
+                        {% include '_snippets/_item/_jewel' %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

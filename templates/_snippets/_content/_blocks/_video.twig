@@ -1,0 +1,12 @@
+<div class="container margin-top">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="image-block">
+                {% set embed = craft.videoEmbedder.getEmbedUrl(block.video, {autoplay: 0, rel: 0, theme: 'dark'}) %}
+                {% if embed | length %}
+                    <iframe src="{{ embed }}"></iframe>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

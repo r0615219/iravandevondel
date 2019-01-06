@@ -1,0 +1,60 @@
+{% extends '_layout' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="header-page"
+             style="background-image:url({{ entry.heroImage.one().getUrl('hero') ?? fallback.heroImage.one().getUrl('hero') }})">
+            <div class="col-md-6 col-md-offset-6">
+                <div class="row">
+                    <div class="inner-content">
+                        <div class="header-content">
+                            <h1>{{ entry.title }}</h1>
+                            <hr>
+                            <p>{{ entry.intro }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container margin-top">
+        <div class="contact-wrapper">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <span class="icon-info">
+                        <i class="pe-7s-map-marker"></i>
+                    </span>
+                        <span class="title-info">ADRES:</span>
+                        <span class="description-info">{{ mainInfo.address.street }}
+                            , {{ mainInfo.address.postalCode }} {{ mainInfo.address.city }}</span>
+                    </div>
+
+                    <div class="contact-info">
+                        <span class="icon-info">
+                        <i class="pe-7s-mail"></i>
+                    </span>
+                        <span class="title-info">EMAIL:</span>
+                        <span class="description-info">{{ mainInfo.mail }}</span>
+                    </div>
+
+                    <div class="contact-info">
+                        <span class="icon-info">
+                        <i class="pe-7s-phone"></i>
+                    </span>
+                        <span class="title-info">TELEFOON:</span>
+                        <span class="description-info">{{ mainInfo.phone }}</span>
+                        <span class="description-info">{{ mainInfo.mobile }}</span>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-md-offset-1">
+                    {{ entry.text }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

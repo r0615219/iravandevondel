@@ -1,0 +1,52 @@
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ siteUrl }}">
+                <img src="{{ logo.logo.one().getUrl('logo') }}" alt="Logo">
+            </a>
+        </div>
+
+        <!-- Menu Hamburger (Default) -->
+        <button class="main-menu-indicator" id="open-button">
+            <span class="line"></span>
+        </button>
+
+        <div class="menu-wrap">
+            <div class="menu-content">
+                <div class="navigation">
+                    <span class="pe-7s-close close-menu" id="close-button"></span>
+                </div>
+                <nav class="menu">
+                    <div class="menu-list">
+                        <ul>
+                            <li><a href="{{ siteUrl }}">Home</a></li>
+                            <li><a href="{{ craft.entries.section('about').one().getUrl() }}">Over Ira</a></li>
+                            <li><a href="{{ craft.entries.section('jewelsOverview').one().getUrl() }}">Juwelen</a></li>
+                            <li><a href="{{ craft.entries.section('projectsOverview').one().getUrl() }}">Wandelstokken</a></li>
+                            <li><a href="{{ craft.entries.section('publicationsOverview').one().getUrl() }}">Publicaties</a></li>
+                            <li><a href="{{ craft.entries.section('newsOverview').one().getUrl() }}">Nieuws</a></li>
+                            <li><a href="{{ craft.entries.section('contact').one().getUrl() }}">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                {% if mainInfo.phone|length or mainInfo.mail|length %}
+                    <div class="hidden-xs">
+                        <div class="menu-information">
+                            <ul>
+                                {% if mainInfo.phone|length %}
+                                    <li><span>T:</span> {{ mainInfo.phone }}</li>
+                                {% endif %}
+                                {% if mainInfo.mail|length %}
+                                    <li><span>E:</span> {{ mainInfo.mail }}</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <!-- End of Menu Hamburger (Default) -->
+
+    </div>
+</div>

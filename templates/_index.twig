@@ -1,0 +1,164 @@
+{% extends '_layout' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="slider-wrapper">
+            <div class="slider-description"></div>
+            <div class="slider-images-wrapper">
+                <img class="img-responsive" src="{{ entry.heroImage.one().getUrl('hero') }}" alt="">
+            </div>
+        </div>
+    </div>
+    {% if entry.textImage|length %}
+        {% set textImage = entry.textImage.one() %}
+        <div class="container margin-top margin-bottom">
+            <div class="history-wrapper">
+                <div class="col-md-6">
+                    <div class="row">
+                        <article>
+                            <h1>{{ textImage.blockTitle|upper }}</h1>
+                            <hr>
+                            <h4>{{ textImage.intro|upper }}</h4>
+                            <br>
+                            {{ textImage.text }}
+                            <br>
+                            {{ textImage.button.getLink({
+                                class: "btn btn-arrow center-block"
+                            }) }}
+                        </article>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="row">
+                        <div id="history-images" class="owl-carousel">
+                            {% for image in textImage.slider %}
+                                <div><img class="img-responsive center-block" src="{{ image.getUrl('sliderImage') }}"
+                                          alt="{{ image.title }}"></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if entry.newsBlock|length %}
+        {% set newsBlock = entry.newsBlock.one() %}
+        <div class="container margin-top margin-bottom">
+            <div class="row">
+                <div class="architecture-content">
+                    {% if newsBlock.blockLeft|length %}
+                        {% set blockLeft = newsBlock.blockLeft.one() %}
+                        <div class="col-md-6">
+                            <div class="box-over-image"
+                                 style="background-image: url({{ blockLeft.backgroundImage.one().getUrl('backgroundBlock') ?? fallback.heroImage.one().getUrl('backgroundBlock') }})">
+                                <div class="box-over-image-inner">
+                                    <h1>{{ blockLeft.blockTitle|upper }}</h1>
+                                    <hr>
+                                    {{ blockLeft.text }}
+                                    {{ blockLeft.button.getLink({
+                                        class: "btn btn-arrow center-block"
+                                    }) }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if newsBlock.blockRight|length %}
+                    {% set blockRight = newsBlock.blockRight.one() %}
+                        <div class="col-md-6">
+                            <div class="tabs-wrapper">
+                                <h1><em>&quot;{{ blockRight.quote|upper }}&quot;</em></h1>
+                                <h6> - {{ blockRight.auteur }}</h6>
+                                <div class="tabs">
+                                    <div class="content-wrap">
+                                        <section class="content-current">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    {{ blockRight.text }}
+                                                    {{ blockRight.button.getLink({
+                                                        class: "btn btn-arrow center-block"
+                                                    }) }}
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div><!-- /content-wrap -->
+                                </div><!-- /tabs -->
+                            </div>
+                            {% if blockRight.image|length %}
+                                <div class="tabs-image">
+                                    <div id="tabs-slider" class="owl-carousel">
+                                        <div><img src="{{ blockRight.image.one().getUrl('smallWideImage') }}" alt="{{ blockRight.image.one().title }}"></div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if entry.text3Columns|length %}
+        {% set text3Columns = entry.text3Columns.one() %}
+        <div class="container margin-top margin-bottom">
+            <div class="main-title">
+                <h1>{{ text3Columns.blockTitle|upper }}</h1>
+                <hr>
+                <h6>{{ text3Columns.intro }}</h6>
+            </div>
+            <div class="services-home-page">
+                <div class="row">
+                    {% for block in text3Columns.columns.all() %}
+                        <div class="col-md-4">
+                            <div class="services-icon">
+                                <span class="{{ block.icon.value }}"></span>
+                                <hr>
+                            </div>
+                            <h4>{{ block.blockTitle|upper }}</h4>
+                            {{ block.text }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if entry.aboutBlock|length %}
+        {% set aboutBlock = entry.aboutBlock.one() %}
+        <div class="container margin-top margin-bottom">
+            <div class="about-studio image-cover" style="background-image: url({{ aboutBlock.backgroundImage.one().getUrl('hero') ?? fallback.heroImage.one().getUrl('hero') }})">
+                <div class="col-md-6 col-md-offset-6">
+                    <div class="our-studio-content">
+                        <h1>{{ aboutBlock.blockTitle|upper }}</h1>
+                        <hr>
+                        {{ aboutBlock.text }}
+                        {{ aboutBlock.button.getLink({
+                            class: "btn btn-arrow center-block"
+                        }) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% set projects = craft.entries.section('projects') %}
+    {% set jewels = craft.entries.section('jewels') %}
+    {% if projects|length or jewels|length %}
+        <div class="container margin-top">
+            <div class="main-title">
+                <h1>{{ "Ira's ontwerpen"|upper }}</h1>
+                <hr>
+            </div>
+            <div class="portfolio-wrapper">
+                <div class="js-masonry">
+                    <div class="row" id="work-grid">
+                        {% for projectEntry in projects.limit(3).all() %}
+                            {% include '_snippets/_item/_project' %}
+                        {% endfor %}
+                        {% for jewelEntry in jewels.limit(3).all() %}
+                            {% include '_snippets/_item/_jewel' %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends '_layout' %}
+
+{% block content %}
+
+    <div class="container blog-header">
+        <div class="header-page">
+            <div class="row">
+                <div class="inner-content">
+                    <div class="header-content center-block">
+                        <h1>{{ entry.title }}</h1>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                {{ entry.intro }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container custom-blog">
+        <div class="single-blog-wrapper">
+            <div class="blog-post">
+                <div class="blog-front-image">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ entry.heroImage.one().getUrl('blogHero') ?? fallback.heroImage.one().getUrl('blogHero') }}"
+                                 alt="{{ entry.title }}">
+                        </div>
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="blog-front-content">
+                                <div class="blog-front-content-inner">
+                                    <span class="post-single-date">{{ entry.postDate|date('d F Y') }}</span>
+                                    <div class="share-buttons">
+                                        <span class="info-title">Deel dit artikel</span>
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/dialog/feed?app_id=1891615151146764&display=popup&amp;caption={{ entry.title }}&link={{ entry.getUrl() }}&redirect_uri={{ entry.getUrl() }}"
+                                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600'); return false;"
+                                                   title="Share on Facebook"><i class="iconmoon-facebook"></i></a></li>
+                                            <li><a href="https://twitter.com/intent/tweet?text={{ entry.title }} -&&url={{ entry.getUrl() }}"
+                                                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600'); return false;" title="Share on Twitter"><i class="iconmoon-twitter"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/shareArticle?mini=false&url={{ entry.getUrl() }}&title={{ entry.title }}&summary={{ entry.intro|striptags }}&source={{ siteName }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600'); return false;" title="Share on LinkedIn"><i class="iconmoon-linkedin2"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include '_snippets/_content/_contentbuilder' %}
+
+{% endblock %}
