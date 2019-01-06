@@ -2,3 +2,5 @@
 /craft/storage/*
 !/craft/storage/logo/*
 vendor/*
+.env
+.idea/*
