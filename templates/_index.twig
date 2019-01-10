@@ -109,10 +109,6 @@
                 <div class="row">
                     {% for block in text3Columns.columns.all() %}
                         <div class="col-md-4">
-                            <div class="services-icon">
-                                <span class="{{ block.icon.value }}"></span>
-                                <hr>
-                            </div>
                             <h4>{{ block.blockTitle|upper }}</h4>
                             {{ block.text }}
                         </div>
