@@ -48,11 +48,11 @@
 }
 
 .our-studio-content .btn-arrow {
-    color: #ddd;
+    color: #555;
 }
 
 .our-studio-content .btn-arrow:hover, .our-studio-content .btn-arrow:focus {
-    color: #aaa;
+    color: #777;
 }
 
 .blog-header .header-page {

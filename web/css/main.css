@@ -1621,7 +1621,8 @@ ul.sub-menu li a {
     padding-bottom: 20px;
 }
 .our-studio-content {
-    background-color: #383838;
+    /*background-color: #383838;*/
+    background-color: rgba(255,255,255,0.8);
     min-height: 460px;
     margin-left: 5px;
     margin-right: 5px;
@@ -1629,10 +1630,10 @@ ul.sub-menu li a {
 }
 .our-studio-content h1,
 .our-studio-content p {
-    color: #fff;
+    color: #333;
 }
 .our-studio-content hr {
-    background: #fff;
+    background: #333;
 }
 .our-story {
     min-height: 500px;
