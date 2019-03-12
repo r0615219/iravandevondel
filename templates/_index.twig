@@ -145,10 +145,10 @@
             <div class="portfolio-wrapper">
                 <div class="js-masonry">
                     <div class="row" id="work-grid">
-                        {% for projectEntry in projects.limit(3).all() %}
+                        {% for projectEntry in projects.orderBy('postDate DESC').limit(3).all() %}
                             {% include '_snippets/_item/_project' %}
                         {% endfor %}
-                        {% for jewelEntry in jewels.limit(3).all() %}
+                        {% for jewelEntry in jewels.orderBy('postDate DESC').limit(3).all() %}
                             {% include '_snippets/_item/_jewel' %}
                         {% endfor %}
                     </div>
