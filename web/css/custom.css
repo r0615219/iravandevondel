@@ -3,6 +3,12 @@
     GRAY: #aaa
 */
 
+/*@font-face {
+    font-family: 'Ubuntu', sans-serif;;
+    src: url('https://fonts.googleapis.com/css?family=Ubuntu') format('woff2');
+    unicode-range: U+30-39;
+}*/
+
 .menu-wrap {
     background: url("../images/zwartevilt.png");
 }
@@ -76,4 +82,8 @@
 
 .custom-blog .blog-post {
     margin-bottom: 0;
+}
+
+.col-no-padding {
+    padding: 0 !important;
 }

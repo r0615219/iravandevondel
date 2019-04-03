@@ -3,10 +3,24 @@
 {% block content %}
     {% if entry.heroImage|length %}
         <div class="container">
-            <div class="single-project-slider">
-                <div class="owl-carousel single-slider">
-                    <div><img class="img-responsive center-block"
-                              src="{{ entry.heroImage.one().getUrl('fullWidthImage') }}" alt="slider"></div>
+            <div class="row">
+                <div class="header-page col-md-6 col-no-padding"
+                     style="background-image:url({{ entry.heroImage.one().getUrl('halfWidthImage') ?? fallback.heroImage.one().getUrl('halfWidthImage') }})">
+                </div>
+                <div class="header-page col-md-6 col-no-padding"
+                     style="background-image:url({{ fallback.heroImage.one().getUrl('halfWidthImage') }})">
+                    <div class="inner-content">
+                        <div class="header-content">
+                            <h1 style="font-family: 'Ubuntu', sans-serif; font-size: 48px; font-weight: normal">{{ entry.title }}</h1>
+                            {% if entry.sticksCategories|length %}
+                                <span class="info" style="display: block; text-align: center">
+                                    {% for stick in entry.sticksCategories.all() %}
+                                        {{ stick.title|upper }}{% if not loop.last %}, {% endif %}
+                                    {% endfor %}
+                                </span>
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -15,13 +29,15 @@
         <div class="single-portfolio-wrapper">
             <div class="row">
                 <div class="col-md-8 col-sm-8">
-                    <h1>{{ entry.title|upper }}</h1>
-                    {% if entry.sticksCategories|length %}
-                        <span class="info">
+                    {% if not entry.heroImage|length %}
+                        <h1>{{ entry.title|upper }}</h1>
+                        {% if entry.sticksCategories|length %}
+                            <span class="info">
                             {% for stick in entry.sticksCategories.all() %}
                                 {{ stick.title|upper }}{% if not loop.last %}, {% endif %}
                             {% endfor %}
                         </span>
+                        {% endif %}
                     {% endif %}
                     {% if entry.text|length %}
                         {{ entry.text }}
@@ -109,16 +125,16 @@
         </div>
     </div>
     {% if entry.relatedSticks|length %}
-    <div class="container margin-top">
-        <div class="similar-project">
-            <h4>Andere wandelstokken</h4>
-            <div class="row">
-                {% for projectEntry in entry.relatedSticks.all() %}
-                    {% include '_snippets/_item/_project' %}
-                {% endfor %}
+        <div class="container margin-top">
+            <div class="similar-project">
+                <h4>Andere wandelstokken</h4>
+                <div class="row">
+                    {% for projectEntry in entry.relatedSticks.all() %}
+                        {% include '_snippets/_item/_project' %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
-    </div>
     {% endif %}
 
 {% endblock %}
