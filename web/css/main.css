@@ -91,7 +91,7 @@ body {
 }
 :-moz-placeholder {
     /* Firefox 18- */
-    
+
     color: #787878;
     font-size: 14px;
     letter-spacing: 1pt;
@@ -99,7 +99,7 @@ body {
 }
 ::-moz-placeholder {
     /* Firefox 19+ */
-    
+
     color: #787878;
     font-size: 14px;
     letter-spacing: 1pt;
@@ -1033,7 +1033,7 @@ span.border-text {
     transition-delay: 0.15s;
 }
 .search-wrap.open input:focus {
-    border:0; 
+    border:0;
 }
 .search-wrap.open ::-webkit-input-placeholder {
     font-size: 12px;
@@ -1425,7 +1425,7 @@ ul.sub-menu li a {
 
 .menu-wrap-2 ul{
     padding:0;
-    margin-bottom:0; 
+    margin-bottom:0;
 }
 
 .menu-wrap-2 ul li{
@@ -2477,7 +2477,7 @@ ul.social-buttons li {
 }
 
 /*Play Button*/
-.playBut { 
+.playBut {
     display: inline-block;
     -webkit-transition: all 0.5s ease;
     background-color: rgba(255, 255, 255, 0.79);
@@ -2520,9 +2520,30 @@ ul.social-buttons li {
 .blog-front-content {
     position: absolute;
     right: 0;
-    background: #555;
+    background: #aaa;
     width: 100%;
     padding: 40px;
+}
+.blog-link {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+.blog-link:hover .blog-front-content {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    background: #bbb;
+}
+.blog-link:hover img {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    opacity: 0.9;
 }
 .blog-front-content-inner {
     position: relative;

@@ -4,14 +4,16 @@
     {% if entry.heroImage|length %}
         <div class="container">
             <div class="row">
+                {% set image = entry.heroImage.one() ?? fallback.heroImage.one() %}
                 <div class="header-page col-md-6 col-no-padding"
-                     style="background-image:url({{ entry.heroImage.one().getUrl('halfWidthImage') ?? fallback.heroImage.one().getUrl('halfWidthImage') }})">
+                     style="background-image:url({{ image.getUrl('halfWidthImage') }});
+                             background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %};">
                 </div>
                 <div class="header-page col-md-6 col-no-padding"
                      style="background-image:url({{ fallback.heroImage.one().getUrl('halfWidthImage') }})">
-                    <div class="inner-content">
+                    <div class="inner-content position-absolute">
                         <div class="header-content">
-                            <h1 style="font-family: 'Ubuntu', sans-serif; font-size: 48px; font-weight: normal">{{ entry.title }}</h1>
+                            <h1 class="header-alt">{{ entry.title }}</h1>
                             {% if entry.sticksCategories|length %}
                                 <span class="info" style="display: block; text-align: center">
                                     {% for stick in entry.sticksCategories.all() %}

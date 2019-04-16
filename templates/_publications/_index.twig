@@ -3,7 +3,9 @@
 {% block content %}
 
     <div class="container">
-        <div class="header-page" style="background-image:url({{ entry.heroImage.one().getUrl('hero') ?? fallback.heroImage.one().getUrl('hero') }})">
+        {% set image = entry.heroImage.one() ?? fallback.heroImage.one() %}
+        <div class="header-page" style="background-image:url({{ image.getUrl('hero') }});
+                background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %};">
             <div class="col-md-6 col-md-offset-6">
                 <div class="row">
                     <div class="inner-content">
@@ -23,25 +25,25 @@
         <div class="container margin-top">
             <div class="blog-wrapper">
                 {% for blogEntry in news.all() %}
-                <div class="blog-post">
+                <a href="{{ blogEntry.url }}"  class="blog-post blog-link">
                     <div class="blog-front-image">
                         <div class="row">
                             <div class="col-md-6">
                                 <img src="{{ blogEntry.heroImage.one().getUrl('blogHero') ?? fallback.heroImage.one().getUrl('blogHero') }}" alt="{{ entry.title }}">
                             </div>
-                            <div class="col-md-5 col-md-offset-1">
+                            <div class="col-md-4 col-md-offset-2">
                                 <div class="blog-front-content">
                                     <div class="blog-front-content-inner">
                                         <span class="post-date">{{ blogEntry.postDate|date('d F Y') }}</span>
                                         <h1>{{ blogEntry.title }}</h1>
                                         {{ blogEntry.intro }}
-                                        <a href="{{ blogEntry.url }}"><i class="read-more-blog-icon pe-7s-angle-right-circle"></i></a>
+                                        <i class="read-more-blog-icon pe-7s-angle-right-circle"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 {% endfor %}
             </div>
         </div>
