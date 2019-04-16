@@ -1,4 +1,6 @@
 {
   "buttons": ["bold", "italic"],
+  "plugins": ["limiter"],
+  "limiter": 200,
   "toolbarFixed": true
 }

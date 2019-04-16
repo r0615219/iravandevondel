@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0ca726f-0be6-41e9-b78a-2c9a236242bf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/redactor/plugins/limiter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/redactor/plugins/limiter.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_jewels/_entry.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_jewels/_entry.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_jewels/_index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_jewels/_index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_news/_index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_news/_index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_projects/_entry.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_projects/_entry.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_projects/_index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_projects/_index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/redactor/Simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/redactor/Simple.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/_publications/_index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_publications/_index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/files/Wandelstokken/_blogHero/Screenshot-2018-12-13-at-22.15.59.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/files/Wandelstokken/_fullWidthImage/Screenshot-2018-12-13-at-22.15.59.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/files/Wandelstokken/_hero/Screenshot-2018-12-13-at-22.15.59.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/files/Wandelstokken/_overviewImage/Screenshot-2018-12-13-at-22.15.59.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,21 +33,25 @@
           <entry key="css" value="316" />
           <entry key="env" value="19" />
           <entry key="gitignore" value="16" />
-          <entry key="twig" value="609" />
+          <entry key="json" value="25" />
+          <entry key="twig" value="618" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="19" />
           <entry key="CSS" value="316" />
+          <entry key="JSON" value="25" />
           <entry key="PLAIN_TEXT" value="16" />
-          <entry key="Twig" value="609" />
+          <entry key="Twig" value="618" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="9" />
           <entry key="env" value="1" />
+          <entry key="js" value="2" />
+          <entry key="json" value="2" />
           <entry key="twig" value="18" />
         </counts>
       </usages-collector>
@@ -63,6 +59,8 @@
         <counts>
           <entry key=".env file" value="1" />
           <entry key="CSS" value="9" />
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="2" />
           <entry key="Twig" value="18" />
         </counts>
       </usages-collector>
@@ -70,7 +68,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="648">
@@ -91,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/_publications/_index.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+            <state relative-caret-position="365">
+              <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -100,10 +98,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/_news/_index.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+            <state relative-caret-position="314">
+              <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/redactor/Custom.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/redactor/Simple.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/redactor/plugins/limiter.min.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -131,10 +148,11 @@
         <option value="$PROJECT_DIR$/templates/_jewels/_entry.twig" />
         <option value="$PROJECT_DIR$/templates/_projects/_index.twig" />
         <option value="$PROJECT_DIR$/templates/_jewels/_index.twig" />
-        <option value="$PROJECT_DIR$/templates/_publications/_index.twig" />
-        <option value="$PROJECT_DIR$/templates/_news/_index.twig" />
         <option value="$PROJECT_DIR$/web/css/main.css" />
         <option value="$PROJECT_DIR$/web/css/custom.css" />
+        <option value="$PROJECT_DIR$/templates/_news/_index.twig" />
+        <option value="$PROJECT_DIR$/templates/_publications/_index.twig" />
+        <option value="$PROJECT_DIR$/config/redactor/Simple.json" />
       </list>
     </option>
   </component>
@@ -226,6 +244,24 @@
             <path>
               <item name="iravandevondel" type="b2602c69:ProjectViewProjectNode" />
               <item name="iravandevondel" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iravandevondel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iravandevondel" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="redactor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iravandevondel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iravandevondel" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="redactor" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iravandevondel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iravandevondel" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -253,7 +289,14 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/redactor" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/config/redactor/plugins" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/redactor/plugins" />
+      <recent name="$PROJECT_DIR$/config/redactor" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -284,12 +327,12 @@
       <workItem from="1552743963005" duration="1044000" />
       <workItem from="1553423473151" duration="2026000" />
       <workItem from="1554310301400" duration="422000" />
-      <workItem from="1555435787412" duration="1998000" />
+      <workItem from="1555435787412" duration="3079000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7224000" />
+    <option name="totallyTimeSpent" value="8305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -412,20 +455,6 @@
     <entry file="file://$PROJECT_DIR$/templates/_publications/_entry.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/_news/_index.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/_publications/_index.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -437,6 +466,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="109" column="15" selection-start-line="109" selection-start-column="15" selection-end-line="109" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/redactor/Custom.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_news/_index.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_publications/_index.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/redactor/plugins/limiter.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/redactor/Simple.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>
