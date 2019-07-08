@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    {% set news = craft.entries.section('publications').orderBy('postDate') %}
+    {% set news = craft.entries.section('publications') %}
     {% if news|length %}
         <div class="container margin-top">
             <div class="blog-wrapper">
@@ -34,7 +34,7 @@
                             <div class="col-md-4 col-md-offset-2">
                                 <div class="blog-front-content">
                                     <div class="blog-front-content-inner">
-                                        <span class="post-date">{{ blogEntry.postDate|date('d F Y') }}</span>
+                                        {#<span class="post-date">{{ blogEntry.postDate|date('d F Y') }}</span>#}
                                         <h1>{{ blogEntry.title }}</h1>
                                         {{ blogEntry.intro  }}
                                         <i class="read-more-blog-icon pe-7s-angle-right-circle"></i>
