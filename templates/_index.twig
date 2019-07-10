@@ -120,7 +120,9 @@
     {% if entry.aboutBlock|length %}
         {% set aboutBlock = entry.aboutBlock.one() %}
         <div class="container margin-top margin-bottom">
-            <div class="about-studio image-cover" style="background-image: url({{ aboutBlock.backgroundImage.one().getUrl('hero') ?? fallback.heroImage.one().getUrl('hero') }})">
+            <div class="about-studio image-cover" style="background-color: black;
+                    background-image: url({{ aboutBlock.backgroundImage.one().getUrl('hero') ?? fallback.heroImage.one().getUrl('hero') }});
+                    background-repeat: no-repeat; background-size: contain; background-position: left;">
                 <div class="col-md-6 col-md-offset-6">
                     <div class="our-studio-content">
                         <h1>{{ aboutBlock.blockTitle|upper }}</h1>
@@ -134,9 +136,7 @@
             </div>
         </div>
     {% endif %}
-    {% set projects = craft.entries.section('projects') %}
-    {% set jewels = craft.entries.section('jewels') %}
-    {% if projects|length or jewels|length %}
+    {% if entry.ontwerpen|length %}
         <div class="container margin-top">
             <div class="main-title">
                 <h1>{{ "Ira's ontwerpen"|upper }}</h1>
@@ -145,11 +145,14 @@
             <div class="portfolio-wrapper">
                 <div class="js-masonry">
                     <div class="row" id="work-grid">
-                        {% for projectEntry in projects.orderBy('postDate DESC').limit(3).all() %}
-                            {% include '_snippets/_item/_project' %}
-                        {% endfor %}
-                        {% for jewelEntry in jewels.orderBy('postDate DESC').limit(3).all() %}
-                            {% include '_snippets/_item/_jewel' %}
+                        {% for ontwerpEntry in entry.ontwerpen.all() %}
+                            {% if ontwerpEntry.section.handle == 'jewels' %}
+                                {% set jewelEntry = ontwerpEntry %}
+                                {% include '_snippets/_item/_jewel' %}
+                            {% elseif ontwerpEntry.section.handle == 'projects' %}
+                                {% set projectEntry = ontwerpEntry %}
+                                {% include '_snippets/_item/_project' %}
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>

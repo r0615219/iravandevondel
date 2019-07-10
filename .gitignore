@@ -4,3 +4,6 @@
 vendor/*
 .env
 .idea/*
+.idea
+web/files/*
+storage/*

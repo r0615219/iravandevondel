@@ -3,7 +3,12 @@
 {% block content %}
 
 <div class="container">
-    <div class="header-page" style="background-image:url({{ entry.heroImage.one().getUrl('hero') ?? fallback.heroImage.one().getUrl('hero') }})">
+    {% set image = entry.heroImage.one() ?? fallback.heroImage.one() %}
+    <div class="header-page"
+         style="background-color: black;
+                 background-image:url({{ image.getUrl('hero') }});
+                 background-position: left;
+                 background-size: contain; background-repeat: no-repeat">
         <div class="col-md-6 col-md-offset-6">
             <div class="row">
                 <div class="inner-content">

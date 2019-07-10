@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "^3.0.0",
+    "craftcms/cms": "3.1.34",
     "vlucas/phpdotenv": "^2.4.0",
     "studioespresso/craft-dumper": "1.3.1",
     "rias/craft-position-fieldtype": "1.0.14",
@@ -9,7 +9,8 @@
     "verbb/super-table": "2.0.14",
     "sebastianlenz/linkfield": "1.0.15",
     "verbb/expanded-singles": "^1.0",
-    "mikestecker/craft-videoembedder": "^1.1"
+    "mikestecker/craft-videoembedder": "^1.1",
+    "superbig/craft3-http2serverpush": "^1.0"
   },
   "autoload": {
     "psr-4": {
