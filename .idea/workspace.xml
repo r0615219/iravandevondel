@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0ca726f-0be6-41e9-b78a-2c9a236242bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/storage/config-backups/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/iravandevondel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iravandevondel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/http2-server-push.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/http2-server-push.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_about.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_about.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_index.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +31,7 @@
           <entry key="css" value="316" />
           <entry key="env" value="19" />
           <entry key="gitignore" value="32" />
-          <entry key="json" value="25" />
+          <entry key="json" value="37" />
           <entry key="twig" value="1016" />
         </counts>
       </usages-collector>
@@ -47,7 +39,7 @@
         <counts>
           <entry key=".env file" value="19" />
           <entry key="CSS" value="316" />
-          <entry key="JSON" value="25" />
+          <entry key="JSON" value="37" />
           <entry key="PLAIN_TEXT" value="32" />
           <entry key="Twig" value="1016" />
         </counts>
@@ -78,7 +70,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -87,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -127,8 +119,8 @@
         <option value="$PROJECT_DIR$/config/http2-server-push.php" />
         <option value="$PROJECT_DIR$/templates/_about.twig" />
         <option value="$PROJECT_DIR$/templates/_index.twig" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -282,12 +274,12 @@
       <workItem from="1554310301400" duration="422000" />
       <workItem from="1555435787412" duration="3179000" />
       <workItem from="1562186724528" duration="219000" />
-      <workItem from="1562607052854" duration="1852000" />
+      <workItem from="1562607052854" duration="2243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10476000" />
+    <option name="totallyTimeSpent" value="10867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -450,17 +442,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
