@@ -10,7 +10,7 @@
     {% set locale = craft.app.locale %}
     {% set locales = craft.app.i18n.siteLocaleIds|without(locale) %}
 
-<title>{{ seo.title|t({systemName: systemName})|replace("&amp;#039;", "'") }}</title>
+<title>{{ seo.title|t({systemName: systemName})|replace("&#039;", "'") }}</title>
 <meta name="description" content="{{ seo.description }}"/>
 
 {% set fb = seo.social.facebook -%}
