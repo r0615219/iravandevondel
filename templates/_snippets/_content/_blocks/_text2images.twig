@@ -1,0 +1,65 @@
+<div class="container margin-top">
+    <div class="row">
+        {% if block.positie == 'center' %}
+            {% if block.image1|length %}
+                <div class="col-md-4">
+                    <div class="image-block">
+                        <img src="{{ block.image1.one().getUrl('halfWidthImage') }}"
+                             alt="{{ block.image1.one().title }}">
+                    </div>
+                </div>
+            {% endif %}
+            <div class="col-md-4">
+                {{ block.text }}
+            </div>
+            {% if block.image1|length %}
+                <div class="col-md-4">
+                    <div class="image-block">
+                        <img src="{{ block.image2.one().getUrl('halfWidthImage') }}"
+                             alt="{{ block.image2.one().title }}">
+                    </div>
+                </div>
+            {% endif %}
+        {% elseif block.positie == 'right' %}
+            {% if block.image1|length %}
+                <div class="col-md-4">
+                    <div class="image-block">
+                        <img src="{{ block.image1.one().getUrl('halfWidthImage') }}"
+                             alt="{{ block.image1.one().title }}">
+                    </div>
+                </div>
+            {% endif %}
+            {% if block.image1|length %}
+                <div class="col-md-4">
+                    <div class="image-block">
+                        <img src="{{ block.image2.one().getUrl('halfWidthImage') }}"
+                             alt="{{ block.image2.one().title }}">
+                    </div>
+                </div>
+            {% endif %}
+            <div class="col-md-4">
+                {{ block.text }}
+            </div>
+        {% else %}
+            <div class="col-md-4">
+                {{ block.text }}
+            </div>
+            {% if block.image1|length %}
+                <div class="col-md-4">
+                    <div class="image-block">
+                        <img src="{{ block.image1.one().getUrl('halfWidthImage') }}"
+                             alt="{{ block.image1.one().title }}">
+                    </div>
+                </div>
+            {% endif %}
+            {% if block.image1|length %}
+                <div class="col-md-4">
+                    <div class="image-block">
+                        <img src="{{ block.image2.one().getUrl('halfWidthImage') }}"
+                             alt="{{ block.image2.one().title }}">
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>

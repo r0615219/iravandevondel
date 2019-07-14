@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0ca726f-0be6-41e9-b78a-2c9a236242bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/_layout.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_layout.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="d0ca726f-0be6-41e9-b78a-2c9a236242bf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +30,7 @@
           <entry key="gitignore" value="32" />
           <entry key="js" value="2" />
           <entry key="json" value="37" />
-          <entry key="twig" value="1115" />
+          <entry key="twig" value="1343" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -44,7 +40,7 @@
           <entry key="JSON" value="37" />
           <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="32" />
-          <entry key="Twig" value="1115" />
+          <entry key="Twig" value="1343" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,7 +51,7 @@
           <entry key="js" value="3" />
           <entry key="json" value="4" />
           <entry key="php" value="1" />
-          <entry key="twig" value="34" />
+          <entry key="twig" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -66,7 +62,7 @@
           <entry key="JavaScript" value="3" />
           <entry key="PHP" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Twig" value="34" />
+          <entry key="Twig" value="36" />
         </counts>
       </usages-collector>
     </session>
@@ -103,8 +99,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/_snippets/_content/_blocks/_textImage.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+            <state relative-caret-position="45">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/_snippets/_content/_blocks/_text2images.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="753">
+              <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -158,6 +163,7 @@
         <option value="$PROJECT_DIR$/templates/_layout.twig" />
         <option value="$PROJECT_DIR$/web/js/main.js" />
         <option value="$PROJECT_DIR$/web/css/custom.css" />
+        <option value="$PROJECT_DIR$/templates/_snippets/_content/_blocks/_text2images.twig" />
         <option value="$PROJECT_DIR$/templates/_snippets/_content/_blocks/_textImage.twig" />
       </list>
     </option>
@@ -343,12 +349,12 @@
       <workItem from="1555435787412" duration="3179000" />
       <workItem from="1562186724528" duration="219000" />
       <workItem from="1562607052854" duration="3677000" />
-      <workItem from="1563090341824" duration="2251000" />
+      <workItem from="1563090341824" duration="3112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14552000" />
+    <option name="totallyTimeSpent" value="15413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -543,10 +549,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_snippets/_content/_blocks/_text2images.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/_snippets/_content/_blocks/_textImage.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        <state relative-caret-position="45">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
