@@ -88,12 +88,6 @@
     padding: 0 !important;
 }
 
-.vertical-align {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 h1.header-alt {
     font-family: 'Ubuntu', sans-serif !important;
     font-size: 48px;
