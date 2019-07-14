@@ -90,7 +90,7 @@
                     {% for image in entry.images.all() %}
                         <div class="col-md-6 col-sm-6">
                             <div class="single-project-images">
-                                <a data-fancybox="gallery" href="{{ image.getUrl() }}">
+                                <a data-fancybox="gallery" href="{{ image.getUrl() }}" data-caption="{{ image.title ?? '' }}">
                                     <img src="{{ image.getUrl('otherImages') }}" alt="{{ image.title }}">
                                 </a>
                             </div>
